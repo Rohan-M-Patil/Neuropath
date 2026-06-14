@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top right, rgba(124,156,255,0.08), transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(255,122,69,0.06), transparent 50%),
+    #0A0E14;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0F1521; }
+::-webkit-scrollbar-thumb { background: #2A3548; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3A4768; }
+
+.synapse-line {
+  stroke-dasharray: 6 6;
+  animation: dash 20s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .synapse-line, .animate-pulse_slow { animation: none !important; }
+}
